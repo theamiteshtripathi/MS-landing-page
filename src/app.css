@@ -1,0 +1,80 @@
+::-webkit-scrollbar {
+    width: 14px;
+    height: 14px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--gray-40);
+    border-radius: var(--border-rounded);
+    border: 3px solid transparent;
+    background-clip: content-box;
+}
+
+.btn {
+    --padding-x: 1.5rem;
+    border: none;
+    outline: none;
+    border-radius: var(--border-rounded);
+    padding-inline: var(--padding-x);
+    width: fit-content;
+    height: var(--control-height);
+    font-family: var(--font-family-lato);
+    font-size: calc(var(--font-size-1) * 1.1);
+    font-weight: var(--font-semibold);
+    cursor: pointer;
+    transition: background var(--default-duration) ease, color var(--default-duration) ease;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--text-dark);
+}
+
+.btn-primary:is(:hover, :focus-visible) {
+    background-color: var(--primary-hover);
+}
+
+.btn-primary:active {
+    background-color: var(--primary-active);
+}
+
+.btn-outline {
+    border: 1px solid var(--gray-10);
+    background-color: transparent;
+    color: var(--text-dark);
+}
+
+.btn-outline:is(:hover, :focus-visible) {
+    border: 1px solid var(--gray-10);
+    background-color: var(--gray-10);
+    color: var(--text-light);
+}
+
+.link {
+    outline: none;
+    color: var(--text-dark);
+    cursor: pointer;
+    transition: color var(--default-duration) ease;
+}
+
+.link:is(:hover, :focus-visible) {
+    color: var(--primary-40);
+}
+
+section {
+    position: relative;
+    min-height: var(--full-view-height);
+    padding-block: var(--header-height);
+    overflow: hidden;
+}
+
+.section-title {
+    position: relative;
+    color: var(--text-dark);
+}
+
+.section-title::after {
+    content: url("./assets/heading-right.svg");
+    position: absolute;
+    transform: translateY(-25%);
+}
